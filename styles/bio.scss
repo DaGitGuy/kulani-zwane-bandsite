@@ -1,5 +1,13 @@
 /* Sass code goes here */
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
 .hero {
     background-image: url(../assets/images/hero-bio.jpg);
 }

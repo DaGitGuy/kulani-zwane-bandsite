@@ -1,0 +1,18 @@
+
+@use './variables';
+
+@mixin reset-list {
+    list-style: none;
+}
+
+@mixin tablet-0 {
+    @media (min-width: variables.$tablet-breakpoint-0) {
+        @content;
+    }
+}
+
+@mixin desktop-0 {
+    @media (min-width: variables.$desktop-breakpoint-0) {
+        @content;
+    }
+}

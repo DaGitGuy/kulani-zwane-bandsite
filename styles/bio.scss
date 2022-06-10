@@ -1,12 +1,8 @@
-/* Sass code goes here */
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-}
+@use './partials/global';
+@use './partials/colors';
+@use './partials/typography';
+@use './partials/variables';
 
 .hero {
     background-image: url(../assets/images/hero-bio.jpg);

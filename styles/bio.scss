@@ -1,10 +1,49 @@
 
-@use './partials/global';
+@use './partials/global'; //includes typography
 @use './partials/colors';
-@use './partials/typography';
-@use './partials/header';
-@use './partials/variables';
+@use './partials/header'; //includes colors + mixins (mixins include variables)
+@use './partials/mixins';
 
 .hero {
-    background-image: url(../assets/images/hero-bio.jpg);
+    position: relative;
+    text-align: left;
+
+    &__image {
+        display: block;
+        padding: 0;
+    }
+
+    &__overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: colors.$black, $alpha: 0.5);
+    }
+
+    &__title {
+        color: colors.$white;
+        position: absolute;
+        bottom: 36%;
+
+        @include mixins.padding-16px-left; 
+    }
+}
+
+.about-container {
+    @include mixins.padding-16px-left;
+    @include mixins.padding-16px-right;
+
+    & > p {
+        padding: 0;
+        font-size: 0.875rem; // =14px
+        font-weight: 700;
+        line-height: 1.375rem; // =22px   
+    }
+}
+
+.photo-gallery {
+    background-color: colors.$alabaster;
+    @include mixins.padding-16px-left;
+    @include mixins.padding-16px-right;
 }

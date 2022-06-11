@@ -11,7 +11,9 @@
     align-items: center;
 
     &__logo {
-        @include mixins.padding-16px;
+        max-width: 7.5rem; // =120px
+        padding-bottom: 0.2rem;
+        @include mixins.padding-16px-top;
     }
 }
 
@@ -19,7 +21,7 @@
     width: 100%;
     
     &__list {
-        display: flex; //override column direction
+        display: flex; //overrides column direction
 
         @include mixins.reset-list;
     }
@@ -36,18 +38,18 @@
         justify-content: center;
         color: colors.$mercury;
         text-decoration: none;
-    
-        @include mixins.padding-16px-bottom;
+        padding-bottom: 0.438rem;
+        @include mixins.font-size-14px;
 
         &--selected {
             color: colors.$white;
-            font-weight: 700;
-            border-bottom: solid colors.$white 0.25rem;
+            border-bottom: solid colors.$white 0.20rem;
+            @include mixins.font-weight-700;
         }
 
         &:hover {
             color: colors.$white;
-            border-bottom: solid colors.$white 0.25rem;
+            border-bottom: solid colors.$white 0.20rem;
         }
     }
 }

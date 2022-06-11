@@ -11,8 +11,24 @@
     padding: 1rem 0;
 }
 
+@mixin padding-16px-top {
+    padding-top: 1rem;   
+}
+
 @mixin padding-16px-bottom {
-    padding: 0 0 1rem 0;   
+    padding-bottom: 1rem;   
+}
+
+@mixin padding-16px-left {
+    padding-left: 1rem;   
+}
+
+@mixin padding-16px-right {
+    padding-right: 1rem;   
+}
+
+@mixin padding-24px-top {
+    padding-top: 1.5rem;   
 }
 
 //..............Line height.................
@@ -20,6 +36,15 @@
     line-height: 2rem;
 }
 
+//..............Font sizes.................
+@mixin font-size-14px {
+    font-size: 0.875rem;
+}
+
+//..............Font weights.................
+@mixin font-weight-700 {
+    font-weight: 700;
+}
 
 //..............Displays.................
 @mixin tablet-0 {

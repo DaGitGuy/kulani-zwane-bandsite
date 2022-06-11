@@ -48,13 +48,13 @@
 
 //..............Displays.................
 @mixin tablet-0 {
-    @media (min-width: variables.$tablet-breakpoint-0) {
+    @media (min-width: variables.$tablet-breakpoint-768px) {
         @content;
     }
 }
 
 @mixin desktop-0 {
-    @media (min-width: variables.$desktop-breakpoint-0) {
+    @media (min-width: variables.$desktop-breakpoint-1280px) {
         @content;
     }
 }

@@ -100,6 +100,33 @@ img {
   border-bottom: solid #FFFFFF 0.2rem;
 }
 
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.footer__logo {
+  max-width: 7.5rem;
+  padding-top: 3.125rem;
+}
+
+.footer-socials__container {
+  display: flex;
+  justify-content: space-between;
+  width: 44%;
+}
+.footer-socials__icons {
+  height: 2.5rem;
+}
+
+.footer-contacts > div {
+  padding-top: 0.5rem;
+}
+.footer-contacts > div p:first-child {
+  font-weight: 600;
+}
+
 .hero {
   position: relative;
   text-align: left;

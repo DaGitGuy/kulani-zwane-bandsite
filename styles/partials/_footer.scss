@@ -1,0 +1,38 @@
+
+@use './colors';
+@use './mixins';
+
+.footer {
+    background-color: colors.$black;
+    color: colors.$white;
+    @include mixins.padding-16px-left;
+    @include mixins.padding-16px-right;
+
+    &__logo {
+        max-width: 7.5rem; // =120px
+        padding-top: 3.125rem;
+    }
+}
+
+.footer-socials {
+
+    &__container {
+         display: flex;
+         justify-content: space-between;
+         width: 44%;
+     }
+
+    &__icons {
+        height: 2.5rem;
+    }
+}
+
+.footer-contacts {
+    > div {
+        padding-top: 0.5rem;
+
+        p:first-child {
+            font-weight: 600;
+        }
+    }
+}

@@ -1,2 +1,53 @@
 
 @use './colors';
+@use './mixins';
+
+.site-header {
+    background-color: colors.$black;
+    display: flex;
+
+    // Mobile First
+    flex-direction: column;
+    align-items: center;
+
+    &__logo {
+        @include mixins.padding-16px;
+    }
+}
+
+.header-nav {
+    width: 100%;
+    
+    &__list {
+        display: flex; //override column direction
+
+        @include mixins.reset-list;
+    }
+
+    &__item {
+        width: 50%;
+
+        @include mixins.line-height-32px;
+    }
+
+    &__link {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: colors.$mercury;
+        text-decoration: none;
+    
+        @include mixins.padding-16px-bottom;
+
+        &--selected {
+            color: colors.$white;
+            font-weight: 700;
+            border-bottom: solid colors.$white 0.25rem;
+        }
+
+        &:hover {
+            color: colors.$white;
+            border-bottom: solid colors.$white 0.25rem;
+        }
+    }
+}

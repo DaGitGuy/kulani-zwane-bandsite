@@ -278,17 +278,17 @@ img {
     padding-right: 2.25rem;
   }
   .about-container__image {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
+    padding-left: 3.7rem;
+    padding-right: 3.7rem;
   }
   .about-container :nth-child(3) {
-    padding: 0 2.25rem;
+    padding: 0 3.7rem;
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 2rem;
   }
   .about-container :nth-child(4) {
-    padding: 0.813rem 2.25rem 0 2.25rem;
+    padding: 0.813rem 3.7rem 0 3.7rem;
     font-size: 1rem;
     font-weight: 600;
   }
@@ -296,13 +296,13 @@ img {
 
 @media (min-width: 48rem) {
   .article {
-    padding: 0 2.25rem;
+    padding: 0 3.7rem;
   }
   .article__body {
     display: flex;
   }
   .article__body > p:first-child {
-    padding-right: 2.344rem;
+    padding-right: 2rem;
   }
 }
 

@@ -35,6 +35,11 @@
             line-height: 4.25rem; // =68px
             @include mixins.padding-36px-left;   
         }
+
+        @include mixins.desktop {
+            padding-left: 6.875rem;
+            bottom: 50%;
+        }
     }
 }
 
@@ -45,43 +50,57 @@
         font-weight: 700;
         line-height: 1.375rem; // =22px   
     }
-    @include mixins.padding-16px-left;
-    @include mixins.padding-16px-right;
 
-    @include mixins.tablet {
-
-        &__image {
-            padding-left: 3.7rem;
-            padding-right: 3.7rem;
-        }
-
-        :nth-child(3) { // <p> tag
+    :nth-child(3) { // <p> tag
+        @include mixins.tablet {
             padding: 0 3.7rem;
             font-size: 1.5rem; // =24px
             font-weight: 600;
             line-height: 2rem; // =32px
         }
-        :nth-child(4) { // <p> tag
+    }
+
+    :nth-child(4) { // <p> tag
+        @include mixins.tablet {
             padding: 0.813rem 3.7rem 0 3.7rem;
             font-size: 1rem;
             font-weight: 600;
         }
+    }
+
+    &__image {
+        @include mixins.tablet {
+            padding-left: 3.7rem;
+            padding-right: 3.7rem;
+        }
+    }
+
+    @include mixins.padding-16px-left;
+    @include mixins.padding-16px-right;
+
+    @include mixins.tablet {
         @include mixins.padding-36px-left;
         @include mixins.padding-36px-right;
+    }
+
+    @include mixins.desktop {
+        padding-left: 6.875rem;
+        padding-right: 6.875rem;
     }
 }
 
 .article {
-    @include mixins.tablet {
-        padding: 0 3.7rem;
-
-        &__body {
+    &__body {
+        @include mixins.tablet {
             display: flex;
 
             > p:first-child {
                 padding-right: 2rem;
             }
         }
+    }
+    @include mixins.tablet {
+        padding: 0 3.7rem;
     }    
 }
 

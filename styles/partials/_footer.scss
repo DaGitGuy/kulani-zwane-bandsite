@@ -18,12 +18,11 @@
 
     &__container {
          display: flex;
-         justify-content: space-between;
-         width: 44%;
      }
 
     &__icons {
         height: 2.5rem;
+        padding-right: 1.75rem;
     }
 }
 

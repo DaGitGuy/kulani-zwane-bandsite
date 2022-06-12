@@ -23,9 +23,11 @@
     }
 
     &__title {
-        color: colors.$white;
         position: absolute;
-        bottom: 36%;
+        color: colors.$white;
+        padding-top: 0; 
+        padding-bottom: 0;
+        bottom: 45%;
 
         @include mixins.padding-16px-left; 
     }

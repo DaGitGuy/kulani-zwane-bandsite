@@ -113,11 +113,10 @@ img {
 
 .footer-socials__container {
   display: flex;
-  justify-content: space-between;
-  width: 44%;
 }
 .footer-socials__icons {
   height: 2.5rem;
+  padding-right: 1.75rem;
 }
 
 .footer-contacts > div {
@@ -143,9 +142,11 @@ img {
   background: rgba(50, 50, 50, 0.5);
 }
 .hero__title {
-  color: #FFFFFF;
   position: absolute;
-  bottom: 36%;
+  color: #FFFFFF;
+  padding-top: 0;
+  padding-bottom: 0;
+  bottom: 45%;
   padding-left: 1rem;
 }
 

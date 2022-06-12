@@ -14,6 +14,19 @@
         max-width: 7.5rem; // =120px
         padding-bottom: 0.2rem;
         @include mixins.padding-16px-top;
+
+        @include mixins.tablet {
+            width: 7.5rem;
+            padding: 0;
+            margin-right: 5rem;
+        }        
+    }
+
+    @include mixins.tablet {
+        flex-direction: row;
+        align-items: center;
+        @include mixins.padding-36px-left;
+        @include mixins.padding-36px-right;
     }
 }
 
@@ -21,15 +34,19 @@
     width: 100%;
     
     &__list {
-        display: flex; //overrides column direction
-
+        display: flex; //overrides column direction on Mobile
         @include mixins.reset-list;
     }
 
     &__item {
         width: 50%;
-
         @include mixins.line-height-32px;
+
+        @include mixins.tablet {
+            width: auto;
+            padding-right: 3.75rem;
+            @include mixins.line-height-44px;
+        }
     }
 
     &__link {
@@ -40,6 +57,11 @@
         text-decoration: none;
         padding-bottom: 0.438rem;
         @include mixins.font-size-14px;
+
+        @include mixins.tablet {
+            padding-top: 0.375rem;
+            padding-bottom: 0.6rem;
+        }
 
         &--selected {
             color: colors.$white;

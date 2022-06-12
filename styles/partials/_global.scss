@@ -1,5 +1,6 @@
 
 @use './typography';
+@use './mixins';
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -17,6 +18,13 @@ h1 {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 2rem; // =32px
+
+    @include mixins.tablet {
+        padding-top: 3rem; // =48px 
+        padding-bottom: 2.25rem; // =36px 
+        font-size: 2.25rem;
+        line-height: 2.75rem; // =44px
+    }
 }
 
 h2 {
@@ -26,6 +34,14 @@ h2 {
     font-size: 0.875rem; // =14px
     font-weight: 600;
     line-height: 1.375rem; // =22px   
+
+    @include mixins.tablet {
+        padding-top: 3rem;
+        padding-bottom: 2.25rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
+    }
 }
 
 p {
@@ -34,9 +50,19 @@ p {
     font-size: 0.813rem; // =13px
     font-weight: 400;
     line-height: 1.125rem; // =18px
+
+    @include mixins.tablet {
+        padding-bottom: 2.25rem;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
 }
 
 img {
     padding-bottom: 1rem;
     width: 100%;
+
+    @include mixins.tablet {
+        padding-bottom: 2.25rem;
+    }
 }

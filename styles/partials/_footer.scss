@@ -5,24 +5,58 @@
 .footer {
     background-color: colors.$black;
     color: colors.$white;
-    @include mixins.padding-16px-left;
-    @include mixins.padding-16px-right;
-
+    
     &__logo {
         max-width: 7.5rem; // =120px
         padding-top: 3.125rem;
+
+        @include mixins.tablet {
+            position: absolute;
+            bottom: 70%;
+            left: 80%;
+
+        }
+    }
+    @include mixins.padding-16px-left;
+    @include mixins.padding-16px-right;
+
+    @include mixins.tablet {
+        position: relative;
+
+        &__copyright {
+            @include mixins.line-height-20px;
+        }
+        @include mixins.padding-36px-left;
+        @include mixins.padding-36px-right;
     }
 }
 
 .footer-socials {
-
     &__container {
          display: flex;
+
+         @include mixins.tablet {
+            align-items: center;
+         }
      }
 
     &__icons {
         height: 2.5rem;
         padding-right: 1.75rem;
+
+        @include mixins.tablet {
+            padding-bottom: 0;
+            margin-top: 1.25rem;
+            height: 1.5rem;
+        }
+    }
+
+    @include mixins.tablet {
+        display: flex;
+
+        &__title {
+            padding-right: 2rem;
+        }
     }
 }
 
@@ -32,6 +66,20 @@
 
         p:first-child {
             font-weight: 600;
+        }
+    }
+
+    @include mixins.tablet {
+        display: flex;
+
+        div:nth-child(2), div:nth-child(3) {
+            padding-left: 3.438rem;
+        }
+
+        > div {
+            p {
+                @include mixins.line-height-20px;
+            }
         }
     }
 }

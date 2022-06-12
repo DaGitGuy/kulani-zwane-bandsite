@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
 }
-//..............Padding.................
+//..............Padding....................
 @mixin padding-16px {
     padding: 1rem 0;
 }
@@ -31,12 +31,36 @@
     padding-top: 1.5rem;   
 }
 
+@mixin padding-36px-top {
+    padding-top: 2.25rem;   
+}
+
+@mixin padding-36px-bottom {
+    padding-bottom: 2.25rem;   
+}
+
+@mixin padding-36px-left {
+    padding-left: 2.25rem;   
+}
+
+@mixin padding-36px-right {
+    padding-right: 2.25rem;  
+}
+
 //..............Line height.................
+@mixin line-height-20px {
+    line-height: 1.25rem;
+}
+
 @mixin line-height-32px {
     line-height: 2rem;
 }
 
-//..............Font sizes.................
+@mixin line-height-44px {
+    line-height: 2.75rem;
+}
+
+//..............Font sizes..................
 @mixin font-size-14px {
     font-size: 0.875rem;
 }
@@ -46,14 +70,14 @@
     font-weight: 700;
 }
 
-//..............Displays.................
-@mixin tablet-0 {
+//..............Displays.....................
+@mixin tablet {
     @media (min-width: variables.$tablet-breakpoint-768px) {
         @content;
     }
 }
 
-@mixin desktop-0 {
+@mixin desktop {
     @media (min-width: variables.$desktop-breakpoint-1280px) {
         @content;
     }

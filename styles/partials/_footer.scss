@@ -15,11 +15,17 @@
             bottom: 70%;
             left: 80%;
         }
+        @include mixins.desktop {
+            left: 82%;
+        }
     }
 
     &__copyright {
         @include mixins.tablet {
             @include mixins.line-height-20px;  
+        }
+        @include mixins.desktop {
+            padding-top: 0.625rem;
         }
     }
 
@@ -30,6 +36,11 @@
         position: relative;
         @include mixins.padding-36px-left;
         @include mixins.padding-36px-right;
+    }
+
+    @include mixins.desktop {
+        padding-left: 6.875rem;
+        padding-right: 6.875rem;
     }
 }
 
@@ -57,6 +68,9 @@
         @include mixins.tablet {
             padding-right: 2rem;
         }
+        @include mixins.desktop {
+            padding-right: 3.5rem;
+        }
     }
 
     @include mixins.tablet {
@@ -71,10 +85,10 @@
         p:first-child {
             font-weight: 600;
         }
-        
-        @include mixins.tablet {
-            p {
-                @include mixins.line-height-20px; 
+
+        p {
+            @include mixins.tablet {
+                @include mixins.line-height-20px;
             }
         }
     }
@@ -82,6 +96,9 @@
     div:nth-child(2), div:nth-child(3) {
         @include mixins.tablet {
             padding-left: 3.438rem;
+        }
+        @include mixins.desktop {
+            padding-left: 5rem;
         }
     }
 

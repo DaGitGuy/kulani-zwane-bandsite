@@ -57,6 +57,20 @@
                 <img src="./assets/images/Photo-gallery-9.jpg" alt="Image 9"/>
             </div>
         </section>
+        <section class="comment">
+            <h1>Join the Conversation</h1>
+            <img class="comment__image" src="./assets/images/Mohan-muruge.jpg" alt="Mohan Muruge Image">
+            <form id="commentForm">
+                <label for="fullName">Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your name">
+
+                <label for="comment">Comment</label>
+                <textarea id="comment" name="comment" cols="30" rows="4" placeholder="Add a new comment"></textarea>
+
+                <button type="submit">Comment</button>
+            </form>
+            <div id="currentCommentsContainer"></div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -89,5 +103,7 @@
         <img class="footer__logo" src="./assets/logos/Logo-bandsite.svg" alt="Band Site logo"/>
         <p class="footer__copyright">Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
     </footer>
+
+    <script src="./scripts/index-page.js"></script>
 </body>
 </html>

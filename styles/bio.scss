@@ -191,6 +191,11 @@
         border-radius: 50%;
         margin-right: 0.938rem;
         object-fit: cover;
+
+        @include mixins.tablet {
+            width: 3rem;
+            height: 3rem;
+        }
     }
 
     &__form {
@@ -262,6 +267,11 @@ button {
         height: 2.25rem;
         border-radius: 50%;
         margin-right: 0.938rem;
+
+        @include mixins.tablet {
+            width: 3rem;
+            height: 3rem;
+        }
     }
 } 
 

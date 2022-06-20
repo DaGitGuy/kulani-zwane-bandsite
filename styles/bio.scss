@@ -165,3 +165,95 @@
         padding-right: 6.875rem;
     }
 }
+
+.comments {
+    @include mixins.padding-16px-left;
+    @include mixins.padding-16px-right;
+}
+
+.comments-content {
+    display: flex;
+
+    &__image {
+        padding-bottom: 0; 
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        margin-right: 0.938rem;
+        object-fit: cover;
+    }
+
+    &__form {
+        :nth-child(3) {
+            padding-top: 1.25rem;
+        }
+    }
+}
+
+label {
+    display: block;
+    text-transform: uppercase;
+    color: colors.$silver;
+    font-weight: 700;
+    line-height: 1.25rem; 
+    font-size: 0.625rem;
+    padding-bottom: 0.25rem;  
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 7rem;
+}
+
+button {
+    width: 100%;
+    height: 2.5rem;
+    text-transform: uppercase;
+    color: colors.$white;
+    font-weight: 700;
+    line-height: 1.25rem; 
+    font-size: 0.625rem;
+    background-color: colors.$black;
+    margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.25rem;
+}
+
+.comment-article {
+    display: flex;
+    border-top: solid 0.063rem colors.$mercury; 
+    padding-top: 0.938rem;
+
+    &__image {
+        background-color: colors.$mercury;
+        padding-bottom: 0; 
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        margin-right: 0.938rem;
+    }
+} 
+
+.comment-name-date {
+    display: flex;
+    justify-content: space-between;
+
+    p:first-child {
+        font-weight: 600;
+    }
+
+    p:nth-child(2) {
+        color: colors.$silver;
+    }
+}
+
+#currentCommentsContainer {
+    article:last-child {
+        border-bottom: solid 0.063rem colors.$mercury; 
+        margin-bottom: 1.2rem;
+    }
+}

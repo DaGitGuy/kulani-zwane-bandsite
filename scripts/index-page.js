@@ -53,44 +53,47 @@ function displayComment(comment) {
 
     //Article element
     const commentArticle = document.createElement('article'); 
+    commentArticle.classList.add('comment-article');
 
     //Image
     const commentImageElement = document.createElement('img');
+    commentImageElement.classList.add('comment-article__image');
     commentArticle.appendChild(commentImageElement);
 
     //Text container
     const commentTextContainer = document.createElement('div');
     commentArticle.appendChild(commentTextContainer);
 
-    //Name & date container
-    const commentNameDateContainer = document.createElement('div');
-    commentTextContainer.appendChild(commentNameDateContainer);
+        //Name & date container
+        const commentNameDateContainer = document.createElement('div');
+        commentNameDateContainer.classList.add('comment-name-date');
+        commentTextContainer.appendChild(commentNameDateContainer);
 
-        //Name
-        const commentName = document.createElement('p');
-        commentName.innerText = comment.name;
-        commentNameDateContainer.appendChild(commentName);
+            //Name
+            const commentName = document.createElement('p');
+            commentName.innerText = comment.name;
+            commentNameDateContainer.appendChild(commentName);
 
-        //Date
-        const commentDate = document.createElement('p');
-        const monthAdjust = comment.timestamp.getMonth()+1;
+            //Date
+            const commentDate = document.createElement('p');
+            const monthAdjust = comment.timestamp.getMonth()+1;
 
-        if (comment.timestamp.getMonth() < 10 && comment.timestamp.getDate() < 10) {
-            commentDate.innerText = '0' + monthAdjust + '/' + '0' + comment.timestamp.getDate() + '/' + comment.timestamp.getFullYear();
-        } else if (comment.timestamp.getMonth() < 10 && comment.timestamp.getDate() > 9) {
-            commentDate.innerText = '0' + monthAdjust + '/' + comment.timestamp.getDate() + '/' + comment.timestamp.getFullYear();
-        } else if (comment.timestamp.getMonth() > 9 && comment.timestamp.getDate() < 10) {
-            commentDate.innerText = monthAdjust + '/' + '0' + comment.timestamp.getDate() + '/' + comment.timestamp.getFullYear();
-        } else {
-            commentDate.innerText = monthAdjust + '/' + comment.timestamp.getDate() + '/' + comment.timestamp.getFullYear();
-        };
+            if (comment.timestamp.getMonth() < 10 && comment.timestamp.getDate() < 10) {
+                commentDate.innerText = '0' + monthAdjust + '/' + '0' + comment.timestamp.getDate() + '/' + comment.timestamp.getFullYear();
+            } else if (comment.timestamp.getMonth() < 10 && comment.timestamp.getDate() > 9) {
+                commentDate.innerText = '0' + monthAdjust + '/' + comment.timestamp.getDate() + '/' + comment.timestamp.getFullYear();
+            } else if (comment.timestamp.getMonth() > 9 && comment.timestamp.getDate() < 10) {
+                commentDate.innerText = monthAdjust + '/' + '0' + comment.timestamp.getDate() + '/' + comment.timestamp.getFullYear();
+            } else {
+                commentDate.innerText = monthAdjust + '/' + comment.timestamp.getDate() + '/' + comment.timestamp.getFullYear();
+            };
 
-        commentNameDateContainer.appendChild(commentDate);
+            commentNameDateContainer.appendChild(commentDate);
 
-    //Comment text
-    const commentText = document.createElement('p'); 
-    commentText.innerText = comment.text;
-    commentTextContainer.appendChild(commentText);
+        //Comment text
+        const commentText = document.createElement('p'); 
+        commentText.innerText = comment.text;
+        commentTextContainer.appendChild(commentText);
 
 
     commentsContainer.appendChild(commentArticle);

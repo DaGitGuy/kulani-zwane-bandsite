@@ -57,18 +57,20 @@
                 <img src="./assets/images/Photo-gallery-9.jpg" alt="Image 9"/>
             </div>
         </section>
-        <section class="comment">
+        <section class="comments">
             <h1>Join the Conversation</h1>
-            <img class="comment__image" src="./assets/images/Mohan-muruge.jpg" alt="Mohan Muruge Image">
-            <form id="commentForm">
-                <label for="fullName">Name</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Enter your name">
+            <div class="comments-content">
+                <img class="comments-content__image" src="./assets/images/Mohan-muruge.jpg" alt="Mohan Muruge Image">
+                <form class="comments-content__form" id="commentForm">
+                    <label for="fullName">Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your name">
 
-                <label for="comment">Comment</label>
-                <textarea id="comment" name="comment" cols="30" rows="4" placeholder="Add a new comment"></textarea>
+                    <label for="comment">Comment</label>
+                    <textarea id="comment" name="comment" cols="30" rows="4" placeholder="Add a new comment"></textarea>
 
-                <button type="submit">Comment</button>
-            </form>
+                    <button type="submit">Comment</button>
+                </form>
+            </div>
             <div id="currentCommentsContainer"></div>
         </section>
     </main>

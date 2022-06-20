@@ -57,6 +57,8 @@ function displayComment(comment) {
 
     //Image
     const commentImageElement = document.createElement('img');
+    commentImageElement.setAttribute('height', 36);
+    commentImageElement.setAttribute('width', 36)
     commentImageElement.classList.add('comment-article__image');
     commentArticle.appendChild(commentImageElement);
 

@@ -169,6 +169,16 @@
 .comments {
     @include mixins.padding-16px-left;
     @include mixins.padding-16px-right;
+
+    @include mixins.tablet {
+        @include mixins.padding-36px-left;
+        @include mixins.padding-36px-right;
+    }
+
+    @include mixins.desktop {
+        padding-left: 6.875rem;
+        padding-right: 6.875rem;
+    }
 }
 
 .comments-content {
@@ -187,6 +197,16 @@
         :nth-child(3) {
             padding-top: 1.25rem;
         }
+    }
+
+    @include mixins.tablet {
+        padding-left: 4.688rem;
+        padding-right: 4.688rem;
+    }
+
+    @include mixins.desktop {
+        padding-left: 17rem;
+        padding-right: 17rem;
     }
 }
 
@@ -221,6 +241,13 @@ button {
     margin-top: 0.8rem;
     margin-bottom: 1.5rem;
     border-radius: 0.25rem;
+
+    @include mixins.tablet {
+        display: inline-block;
+        width: 40%;
+        margin-left: 60%;
+        
+    }
 }
 
 .comment-article {
@@ -255,5 +282,15 @@ button {
     article:last-child {
         border-bottom: solid 0.063rem colors.$mercury; 
         margin-bottom: 1.2rem;
+    }
+
+    @include mixins.tablet {
+        padding-left: 4.688rem;
+        padding-right: 4.688rem;
+    }
+
+    @include mixins.desktop {
+        padding-left: 17rem;
+        padding-right: 17rem;
     }
 }

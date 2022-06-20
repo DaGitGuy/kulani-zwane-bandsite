@@ -1,1 +1,72 @@
+
 @use './partials/global'; //includes typography
+@use './partials/colors';
+@use './partials/header'; //includes colors + mixins (mixins include variables)
+@use './partials/mixins';
+@use './partials/footer'; //includes colors + mixins (mixins include variables)
+
+.hero {
+    position: relative;
+    text-align: left;
+
+    &__image {
+        display: block;
+        padding: 0;
+    }
+
+    &__overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: colors.$black, $alpha: 0.5);
+    }
+
+    &__subtitle {
+        position: absolute;
+        color: colors.$white;
+        padding-top: 0; 
+        padding-bottom: 0;
+        bottom: 80%;
+        @include mixins.padding-16px-left; 
+
+        @include mixins.tablet {
+            font-size: 3.75rem; // =60px
+            line-height: 4.25rem; // =68px
+            @include mixins.padding-36px-left;   
+        }
+
+        @include mixins.desktop {
+            padding-left: 6.875rem;
+            bottom: 50%;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        color: colors.$white;
+        padding-top: 0; 
+        padding-bottom: 0;
+        bottom: 50%;
+        width: 80%;
+        @include mixins.padding-16px-left; 
+
+        @include mixins.tablet {
+            font-size: 3.75rem; // =60px
+            line-height: 4.25rem; // =68px
+            @include mixins.padding-36px-left;   
+        }
+
+        @include mixins.desktop {
+            padding-left: 6.875rem;
+            bottom: 50%;
+        }
+    }
+
+    &__song {
+        position: absolute;
+        bottom: 8%;
+        left: 2%;
+        width: 95%;
+    }
+}

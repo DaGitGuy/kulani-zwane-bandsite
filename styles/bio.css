@@ -442,6 +442,18 @@ img {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media (min-width: 48rem) {
+  .comments {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+@media (min-width: 80rem) {
+  .comments {
+    padding-left: 6.875rem;
+    padding-right: 6.875rem;
+  }
+}
 
 .comments-content {
   display: flex;
@@ -457,6 +469,18 @@ img {
 }
 .comments-content__form :nth-child(3) {
   padding-top: 1.25rem;
+}
+@media (min-width: 48rem) {
+  .comments-content {
+    padding-left: 4.688rem;
+    padding-right: 4.688rem;
+  }
+}
+@media (min-width: 80rem) {
+  .comments-content {
+    padding-left: 17rem;
+    padding-right: 17rem;
+  }
 }
 
 label {
@@ -491,6 +515,13 @@ button {
   margin-bottom: 1.5rem;
   border-radius: 0.25rem;
 }
+@media (min-width: 48rem) {
+  button {
+    display: inline-block;
+    width: 40%;
+    margin-left: 60%;
+  }
+}
 
 .comment-article {
   display: flex;
@@ -520,4 +551,16 @@ button {
 #currentCommentsContainer article:last-child {
   border-bottom: solid 0.063rem #E1E1E1;
   margin-bottom: 1.2rem;
+}
+@media (min-width: 48rem) {
+  #currentCommentsContainer {
+    padding-left: 4.688rem;
+    padding-right: 4.688rem;
+  }
+}
+@media (min-width: 80rem) {
+  #currentCommentsContainer {
+    padding-left: 17rem;
+    padding-right: 17rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

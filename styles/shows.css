@@ -296,15 +296,16 @@ img {
 }
 @media (min-width: 48rem) {
   .hero__subtitle {
-    font-size: 3.75rem;
+    font-size: 1.5rem;
     line-height: 4.25rem;
+    bottom: 72%;
     padding-left: 2.25rem;
   }
 }
 @media (min-width: 80rem) {
   .hero__subtitle {
     padding-left: 6.875rem;
-    bottom: 50%;
+    bottom: 58%;
   }
 }
 .hero__title {
@@ -320,18 +321,45 @@ img {
   .hero__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
+    bottom: 53%;
     padding-left: 2.25rem;
   }
 }
 @media (min-width: 80rem) {
   .hero__title {
     padding-left: 6.875rem;
-    bottom: 50%;
+    bottom: 45%;
+    width: 50%;
   }
 }
 .hero__song {
   position: absolute;
   bottom: 8%;
-  left: 2%;
   width: 95%;
+  padding-left: 1rem;
+}
+@media (min-width: 48rem) {
+  .hero__song iframe {
+    height: 140px;
+  }
+}
+@media (min-width: 80rem) {
+  .hero__song iframe {
+    height: 150px;
+  }
+}
+@media (min-width: 48rem) {
+  .hero__song {
+    width: 60%;
+    bottom: 23%;
+    padding-left: 2.25rem;
+  }
+}
+@media (min-width: 80rem) {
+  .hero__song {
+    padding-left: 6.875rem;
+    bottom: 42%;
+    left: 48%;
+    width: 42%;
+  }
 }/*# sourceMappingURL=shows.css.map */

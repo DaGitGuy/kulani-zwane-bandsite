@@ -25,10 +25,16 @@ formElement.addEventListener('submit', function(e) {
         name: e.target.fullName.value,
         comment: e.target.comment.value  
     };
+
+    if (e.target.fullName.value.trim().length === 0 || e.target.comment.value.trim().length === 0) {
+        newComment.name = null;
+        newComment.comment = null;
+    };
+    
     const headers = {
         'Content-Type': 'application/json'  
     };
-
+    
     axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`, newComment, {
         headers: headers
         })
@@ -42,7 +48,7 @@ formElement.addEventListener('submit', function(e) {
             });
          })
          .catch((error) => {
-            alert("Failed to post your comment! Please try again.");
+            alert('Failed to post your comment!\n' + error.response.data.message + '.\nPlease try again.');
          });
 
     //clear the inputs

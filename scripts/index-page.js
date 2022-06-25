@@ -37,6 +37,9 @@ formElement.addEventListener('submit', function(e) {
             currentComments.forEach((currentComment)=> {
                 displayComment(currentComment);
             });
+         })
+         .catch((error) => {
+            alert("Failed to post your comment! Please try again.");
          });
 
     //clear the inputs

@@ -5,8 +5,6 @@ let currentComments = []; //source of truth
 const formElement = document.querySelector('#commentForm');
 const commentsContainer = document.querySelector('#currentCommentsContainer');
 
-console.log(currentComments);
-
 axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
     .then((response) => {
         currentComments = response.data;
@@ -27,8 +25,13 @@ formElement.addEventListener('submit', function(e) {
         name: e.target.fullName.value,
         comment: e.target.comment.value  
     };
+    const headers = {
+        'Content-Type': 'application/json'  
+    };
 
-    axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`, newComment)
+    axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`, newComment, {
+        headers: headers
+        })
          .then((response) => {
             currentComments.unshift(response.data);
 

@@ -1,23 +1,7 @@
 
 @use './variables';
 
-@mixin reset-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
 //..............Padding....................
-@mixin padding-16px {
-    padding: 1rem 0;
-}
-
-@mixin padding-16px-top {
-    padding-top: 1rem;   
-}
-
-@mixin padding-16px-bottom {
-    padding-bottom: 1rem;   
-}
 
 @mixin padding-16px-left {
     padding-left: 1rem;   
@@ -25,18 +9,6 @@
 
 @mixin padding-16px-right {
     padding-right: 1rem;   
-}
-
-@mixin padding-24px-top {
-    padding-top: 1.5rem;   
-}
-
-@mixin padding-36px-top {
-    padding-top: 2.25rem;   
-}
-
-@mixin padding-36px-bottom {
-    padding-bottom: 2.25rem;   
 }
 
 @mixin padding-36px-left {
@@ -50,24 +22,6 @@
 //..............Line height.................
 @mixin line-height-20px {
     line-height: 1.25rem;
-}
-
-@mixin line-height-32px {
-    line-height: 2rem;
-}
-
-@mixin line-height-44px {
-    line-height: 2.75rem;
-}
-
-//..............Font sizes..................
-@mixin font-size-14px {
-    font-size: 0.875rem;
-}
-
-//..............Font weights.................
-@mixin font-weight-700 {
-    font-weight: 700;
 }
 
 //..............Displays.....................

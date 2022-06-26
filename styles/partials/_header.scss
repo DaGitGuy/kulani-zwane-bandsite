@@ -13,7 +13,7 @@
     &__logo {
         max-width: 7.5rem; // =120px
         padding-bottom: 0.2rem;
-        @include mixins.padding-16px-top;
+        padding-top: 1rem;
 
         @include mixins.tablet {
             width: 7.5rem;
@@ -40,17 +40,20 @@
     
     &__list {
         display: flex; //overrides column direction on Mobile
-        @include mixins.reset-list;
+        //reset list:
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
     &__item {
         width: 50%;
-        @include mixins.line-height-32px;
+        line-height: 2rem;
 
         @include mixins.tablet {
             width: auto;
             padding-right: 3.75rem;
-            @include mixins.line-height-44px;
+            line-height: 2.75rem;
         }
     }
 
@@ -61,12 +64,12 @@
         color: colors.$mercury;
         text-decoration: none;
         padding-bottom: 0.438rem;
-        @include mixins.font-size-14px;
+        font-size: 0.875rem;
 
         &--selected {
             color: colors.$white;
             border-bottom: solid colors.$white 0.20rem;
-            @include mixins.font-weight-700;
+            font-weight: 700;
         }
 
         &:hover {

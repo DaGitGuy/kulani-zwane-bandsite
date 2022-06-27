@@ -13,10 +13,10 @@
         @include mixins.tablet {
             position: absolute;
             bottom: 70%;
-            left: 80%;
+            left: 79%;
         }
         @include mixins.desktop {
-            left: 82%;
+            left: 80%;
         }
     }
 

@@ -85,6 +85,32 @@ img {
   }
 }
 
+button {
+  width: 100%;
+  height: 2.5rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: 700;
+  line-height: 1.25rem;
+  font-size: 0.95rem;
+  background-color: #323232;
+  margin-top: 1.375rem;
+  margin-bottom: 1.125rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #000000;
+}
+@media (min-width: 48rem) {
+  button {
+    margin-top: 0.875rem;
+    margin-bottom: 0.875rem;
+    font-size: 0.9rem;
+  }
+}
+
 .site-header {
   background-color: #323232;
   display: flex;
@@ -177,12 +203,12 @@ img {
   .footer__logo {
     position: absolute;
     bottom: 70%;
-    left: 80%;
+    left: 79%;
   }
 }
 @media (min-width: 80rem) {
   .footer__logo {
-    left: 82%;
+    left: 80%;
   }
 }
 @media (min-width: 48rem) {

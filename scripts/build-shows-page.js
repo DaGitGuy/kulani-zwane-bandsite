@@ -69,10 +69,29 @@ function displayConcert(show) {
     showLocationString.innerText = show.location;
     showLocationContainer.appendChild(showLocationString);
 
+    //Button container
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('button-container');
+    showArticle.appendChild(buttonContainer);
+
     //Buy Tickets button
     const buyTicketsButton = document.createElement('button');
     buyTicketsButton.innerText = 'Buy Tickets';
-    showArticle.appendChild(buyTicketsButton);
+    buttonContainer.appendChild(buyTicketsButton);
     
     concertsContainer.appendChild(showArticle);
+
+    showArticle.addEventListener('click', (e) => {
+        const allArticles = document.querySelectorAll('.show-article');
+
+        allArticles.forEach((article) => {
+            article.classList.remove('show-article--selected');
+            article.classList.remove('show-article--selected-first');
+        })
+        if (showArticle === e.path[3].childNodes[0]) {
+            showArticle.classList.add('show-article--selected-first');
+        } else {
+            showArticle.classList.add('show-article--selected');
+        }
+    });
 };

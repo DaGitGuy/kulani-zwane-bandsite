@@ -18,7 +18,7 @@ axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
         });
     });
 
-formElement.addEventListener('submit', function(e) {
+formElement.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const newComment = {

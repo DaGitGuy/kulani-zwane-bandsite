@@ -4,6 +4,7 @@
 @use './partials/header'; //includes colors + mixins (mixins include variables)
 @use './partials/mixins';
 @use './partials/footer'; //includes colors + mixins (mixins include variables)
+@use './partials/typography';
 
 .hero {
     position: relative;
@@ -31,8 +32,8 @@
         @include mixins.padding-16px-left; 
 
         @include mixins.tablet {
-            font-size: 3.75rem; // =60px
-            line-height: 4.25rem; // =68px
+            font-size: 3.75rem; 
+            line-height: 4.25rem; 
             @include mixins.padding-36px-left;   
         }
 
@@ -46,17 +47,17 @@
 .about-container {
     > p {
         padding: 0;
-        font-size: 0.875rem; // =14px
+        font-size: 0.875rem; 
         font-weight: 700;
-        line-height: 1.375rem; // =22px   
+        line-height: 1.375rem;   
     }
 
     :nth-child(3) { // <p> tag
         @include mixins.tablet {
             padding: 0 3.7rem;
-            font-size: 1.5rem; // =24px
+            font-size: 1.5rem; 
             font-weight: 600;
-            line-height: 2rem; // =32px
+            line-height: 2rem; 
         }
         @include mixins.desktop {
             padding: 0 6rem;
@@ -190,7 +191,9 @@
         height: 2.25rem;
         border-radius: 50%;
         margin-right: 0.938rem;
+        margin-top: 1.5rem;
         object-fit: cover;
+        object-position: left;
 
         @include mixins.tablet {
             width: 3rem;
@@ -199,9 +202,14 @@
     }
 
     &__form {
-        //width: 100%;
+        width: 100%;
         :nth-child(3) {
             padding-top: 1.25rem;
+        }
+
+        @include mixins.tablet {
+            display: flex;
+            flex-direction: column;
         }
     }
 
@@ -222,46 +230,88 @@ label {
     color: colors.$silver;
     font-weight: 700;
     line-height: 1.25rem; 
-    font-size: 0.625rem;
+    font-size: 0.8rem;
     padding-bottom: 0.25rem;  
 }
 
+
 input {
     width: 100%;
+    height: 36px;
+    border-radius: 0.25rem;
+    border: solid 0.063rem colors.$mercury;
+    background-color: colors.$alabaster;
+    padding-left: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-family: 'AvenirNext LT Pro'; 
+    color: colors.$black;
+
+    &::placeholder {
+        color: colors.$black;
+        opacity: 1;
+        font-size: 0.875rem;
+    }
+
+    @include mixins.tablet {
+        height: 3rem;
+    }
 }
 
 textarea {
     width: 100%;
     height: 7rem;
+    border-radius: 0.25rem;
+    border: solid 0.063rem colors.$mercury;
+    background-color: colors.$alabaster;
+    resize: none;
+    padding-left: 0.75rem;
+    padding-top: 0.75rem; 
+    font-family: 'AvenirNext LT Pro'; 
+    color: colors.$black;
+
+    &::placeholder {
+        color: colors.$black;
+        opacity: 1;
+        font-size: 0.875rem;
+    }
+}
+
+.active {
+    outline: '';
+}
+
+.error {
+    outline: solid 0.063rem #D22D2D;
+}
+
+#fullName:focus {
+    outline: solid 0.063rem colors.$black; 
+}
+
+#comment:focus {
+    outline: solid 0.063rem colors.$black; 
 }
 
 button {
-    width: 100%;
-    height: 2.5rem;
-    text-transform: uppercase;
-    color: colors.$white;
-    font-weight: 700;
-    line-height: 1.25rem; 
-    font-size: 0.625rem;
-    background-color: colors.$black;
-    margin-top: 0.8rem;
-    margin-bottom: 1.5rem;
-    border-radius: 0.25rem;
+    @include mixins.button-CTA;
+    margin-top: 0.75rem;
 
     @include mixins.tablet {
-        display: inline-block;
-        width: 40%;
-        margin-left: 60%;
-        
+        width: 33%;
+        margin-left: auto;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 }
 
 .comment-article {
-    display: flex;
+    position: relative;
     border-top: solid 0.063rem colors.$mercury; 
     padding-top: 0.938rem;
 
     &__image {
+        position: absolute;
         background-color: colors.$mercury;
         padding-bottom: 0; 
         width: 2.25rem;
@@ -274,6 +324,24 @@ button {
             height: 3rem;
         }
     }
+
+    &__text-container {
+        padding-left: 3.25rem;
+
+        p {
+            @include mixins.tablet {
+                padding-bottom: 1.563rem;
+            }
+        }
+
+        @include mixins.tablet {
+            padding-left: 4.1rem;
+        }
+    }
+
+    @include mixins.tablet {
+        padding-top: 1.375rem;
+    }
 } 
 
 .comment-name-date {
@@ -282,10 +350,16 @@ button {
 
     p:first-child {
         font-weight: 600;
+        padding-bottom: 0.625rem;
+
+        @include mixins.tablet {
+            padding-bottom: 0.375rem;
+        }
     }
 
     p:nth-child(2) {
         color: colors.$silver;
+        padding-bottom: 0;
     }
 }
 
@@ -293,6 +367,10 @@ button {
     article:last-child {
         border-bottom: solid 0.063rem colors.$mercury; 
         margin-bottom: 1.2rem;
+
+        @include mixins.tablet {
+            margin-bottom: 2.2rem;   
+        }
     }
 
     @include mixins.tablet {

@@ -69,6 +69,7 @@ function displayComment(commentInfo) {
 
     //Text container
     const commentTextContainer = document.createElement('div');
+    commentTextContainer.classList.add('comment-article__text-container');
     commentArticle.appendChild(commentTextContainer);
 
     //Name & date container
@@ -106,5 +107,31 @@ function displayComment(commentInfo) {
     commentsContainer.appendChild(commentArticle);
 };
 
+const inputState = document.querySelector('input[type="text"]');
+const textAreaState = document.getElementById('comment');
+
+inputState.addEventListener('focus', (e) => {
+    e.target.classList.add('active');
+})
+inputState.addEventListener('blur', (e) => {
+    e.target.classList.add('error');
+    if (e.path[0].value.trim().length === 0) {
+        console.log('Capturing user input...');
+    } else {
+        e.target.classList.remove('error');
+    }
+})
+
+textAreaState.addEventListener('focus', (e) => {
+    e.target.classList.add('active');
+})
+textAreaState.addEventListener('blur', (e) => {
+    e.target.classList.add('error');
+    if (e.path[0].value.trim().length === 0) {
+        console.log('Capturing user input...');
+    } else {
+        e.target.classList.remove('error');
+    }
+})
 
 

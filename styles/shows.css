@@ -90,9 +90,10 @@ button {
   height: 2.5rem;
   text-transform: uppercase;
   color: #FFFFFF;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.25rem;
   font-size: 0.95rem;
+  font-family: "AvenirNext LT Pro";
   background-color: #323232;
   margin-top: 1.375rem;
   margin-bottom: 1.125rem;
